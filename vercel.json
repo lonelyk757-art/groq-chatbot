@@ -3,10 +3,5 @@
   "devCommand": "pnpm dev",
   "installCommand": "pnpm install",
   "framework": "vite",
-  "outputDirectory": "dist/public",
-  "env": {
-    "GROQ_API_KEY": {
-      "description": "Your Groq API Key for AI chat completions"
-    }
-  }
+  "outputDirectory": "dist/public"
 }
