@@ -134,21 +134,24 @@ groq-chatbot/
 
 ## Groq API Models
 
-The chatbot currently uses `mixtral-8x7b-32768`. You can change it in `client/src/lib/groq-client.ts`:
+The chatbot currently uses `llama-3.3-70b-versatile`, a production-grade model optimized for quality and speed. You can change it in `client/src/lib/groq-client.ts`:
 
 ```typescript
 export async function sendChatMessage(
   messages: ChatMessage[],
-  model: string = 'mixtral-8x7b-32768'  // Change this
+  model: string = 'llama-3.3-70b-versatile'  // Change this
 ): Promise<ChatResponse> {
   // ...
 }
 ```
 
-**Available Groq Models:**
-- `mixtral-8x7b-32768` - Fast, versatile model
-- `llama2-70b-4096` - High-quality responses
-- `gemma-7b-it` - Lightweight, efficient
+**Available Production Models:**
+- `llama-3.3-70b-versatile` - High-quality, versatile model (recommended)
+- `llama-3.1-8b-instant` - Fast, lightweight model
+- `openai/gpt-oss-120b` - Flagship open-weight model
+- `openai/gpt-oss-20b` - Fastest open-weight model
+
+For the latest models, visit [Groq Console](https://console.groq.com/docs/models)
 
 ## Performance
 

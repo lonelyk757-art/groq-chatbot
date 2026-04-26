@@ -23,7 +23,7 @@ export interface ChatResponse {
 
 export async function sendChatMessage(
   messages: ChatMessage[],
-  model: string = 'mixtral-8x7b-32768'
+  model: string = 'llama-3.3-70b-versatile'
 ): Promise<ChatResponse> {
   try {
     const response = await fetch(GROQ_API_URL, {
